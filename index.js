@@ -21,6 +21,7 @@ const server = new ApolloServer({
         if(err.extensions.code == 'INTERNAL_SERVER_ERROR'){
             return new ApolloError("Call the Administrator", "ERROR", {token: "uniquetoken"});
         }
+        return err;
     }
 });
 server
