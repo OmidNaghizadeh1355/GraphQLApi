@@ -7,7 +7,7 @@ type Query {
         description: String
         startAt: String
         endsAt: String
-        room: String
+        room: Room
         day: String
         format: String
         track: String
@@ -53,4 +53,9 @@ type Session {
     level: String
     favorite: Boolean
     speakers: [Speaker]
+}
+enum Room{
+    EUROPA
+    SOL
+    SATURN
 }`
