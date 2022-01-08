@@ -19,12 +19,26 @@ type Query {
 }
 type Mutation {
     toggleFavoriteSession(id: ID): Session
+    addNewSession(session: SessionInput): Session
 }
 type Speaker {
     id:ID!
     bio: String
     name: String
     sessions: [Session]
+}
+
+input SessionInput {
+    title: String!
+    description: String
+    startAt: String
+    endsAt: String
+    room: String
+    day: String
+    format: String
+    track: String
+    level: String
+    favorite: Boolean
 }
 type Session {
     id: ID!
